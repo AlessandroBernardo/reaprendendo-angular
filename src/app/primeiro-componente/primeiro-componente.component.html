@@ -1,0 +1,16 @@
+<p>A hora atual é: {{ time | date:'shortTime' }}</p>
+
+<div *ngFor="let post of displayedPosts; let i = index">
+    <!-- Aqui você pode exibir as informações do post -->
+    
+    
+    <h2>{{ post.name }}</h2>
+    <p>{{ post.abstractVariable }}</p>
+    <button (click)="deletePost(i)">X</button>
+  </div>
+  
+  <div class="button-container">
+    <button (click)="loadMore()">Carregar mais</button>
+    <button (click)="hidePosts()">Ver menos</button>
+  </div>
+  
